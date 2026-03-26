@@ -1,8 +1,8 @@
 from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.asymmetric import padding
 from cryptography.hazmat.primitives.asymmetric import utils
-from keygen import public_key
-from signing import signature, message
+from keygen import generate_key
+from signing import signature, message, public_key
 
 try:
     public_key.verify(

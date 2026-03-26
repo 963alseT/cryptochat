@@ -1,7 +1,8 @@
 from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.asymmetric import padding
-from keygen import private_key
+from keygen import generate_key
 
+private_key, public_key = generate_key()
 message = b"Hello World"
 signature = private_key.sign(
     message,
