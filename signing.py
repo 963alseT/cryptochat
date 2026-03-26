@@ -3,12 +3,13 @@ from cryptography.hazmat.primitives.asymmetric import padding
 from keygen import generate_key
 
 private_key, public_key = generate_key()
-message = b"Hello World"
-signature = private_key.sign(
-    message,
-    padding.PSS(
-        mgf=padding.MGF1(hashes.SHA256()),
-        salt_length=padding.PSS.MAX_LENGTH
-    ),
-    hashes.SHA256()
-)
+
+def sign_message(message):
+    signature = private_key.sign(
+        message,
+        padding.PSS(
+            mgf=padding.MGF1(hashes.SHA256()),
+            salt_length=padding.PSS.MAX_LENGTH
+        ),
+    )
+    return signature
