@@ -1,7 +1,9 @@
 from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.asymmetric import padding
 from cryptography.hazmat.primitives.asymmetric import utils
-from signing import public_key
+from keygen import get_keys
+
+_, public_key = get_keys()
 
 def verify_message(signature, message):
     try:
