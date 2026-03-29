@@ -1,11 +1,8 @@
 from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.asymmetric import padding
 from cryptography.hazmat.primitives.asymmetric import utils
-from keygen import get_keys
 
-_, public_key = get_keys()
-
-def verify_message(signature, message):
+def verify_message(signature, message, public_key):
     try:
         public_key.verify(
             signature,
@@ -16,6 +13,6 @@ def verify_message(signature, message):
                 ),
                 hashes.SHA256()
                 )
-        print("Signature is valid.")
+        return True
     except Exception:
-        print("Invalid signature")
+        return False
