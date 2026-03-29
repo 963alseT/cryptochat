@@ -1,23 +1,36 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>CryptoChat</title>
-        <link rel="stylesheet" href="/static/style.css">
-    </head>
-    <body>
-        <header>
-            <h1>CryptoChat</h1>
-        </header>
-        <main>
-            <div id="chat-container">
-                <div id="messages"></div>
-                <form id="message-form">
-                    <input type="text" id="message-input" placeholder="Type your message..." autocomplete="off" required>
-                    <button type="submit">Send</button>
-                </form>
-            </div>
-        </main>
-        <script src="/static/script.js"></script>
-    </body>
+
+<head>
+    <title>CryptoChat</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>CryptoChat</h1>
+    </header>
+    <div class="container">
+        
+        <form class="form" id="form">
+            <input class="input" type="text" placeholder="Name" id="myname" autocomplete="off">
+            <input class="input" type="text" placeholder="Message" id="message" autocomplete="off">
+            <button class="button" type="submit">Send</button>
+            <div class="messageArea" id="messageArea"></div>
+        </form>
+
+        
+        
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
