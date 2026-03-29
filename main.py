@@ -13,7 +13,7 @@ print(f"Original message: {message.decode()}")
 signature = sign_message(message, A_private)
 fernet_key = get_fernet_key()
 ciphertext = fernet_encrypt(message, fernet_key)
-print(f"Encrypted message: {ciphertext}")
+print(f"Encrypted message: {ciphertext.decode()}")
 encrypted_key = rsa_encrypt(fernet_key, B_public)
 
 #User B
